@@ -470,7 +470,13 @@ a{
     justify-content: space-between;
     width: 199px;
     height: 33px;
-} 
+}
+.logo:hover .image-logo{
+    background-color:#9d8665;
+}
+.logo:hover .text-logo{
+    color:#9d8665;
+}
 
 .image-logo{
     width: 49px;
@@ -480,9 +486,6 @@ a{
     -webkit-mask-size: cover;
     transition: 1s;
 }
-.image-logo:hover{
-    background-color:#9d8665;
-}
 
 .text-logo{
     color: #FFFFFF;
@@ -490,6 +493,7 @@ a{
     letter-spacing: 5px;
     text-transform: uppercase;
     font-family: "Forum-Regular";
+    transition: 1s;
 }
 
 .header-nav{
@@ -512,6 +516,18 @@ a{
     line-height: 22px;
     letter-spacing: 2px;
 }
+
+.header-li a{
+    color: #FFFFFF;
+    transition: 1s;
+}
+.header-li a:hover{
+    color: #9D8665;
+}
+.header-li a:active{
+    color: #7E6C51;
+}
+
 
 /*.....HEADER-END.....*/
 
@@ -556,6 +572,10 @@ a{
     line-height: 75px;
     letter-spacing: 2px;
     font-family: "Roboto-Light";
+    transition: 1s;
+}
+.welcome-block-button:hover{
+    background-color: #9D8665;
 }
 
 .welcome-slider{
@@ -585,6 +605,11 @@ a{
 
 .visiting-card{
     display: block;
+    color: #000000;
+    transition: 1s;
+}
+.visiting-card:hover{
+    color: #9D8665;
 }
 
 .visiting-card-image{
@@ -595,7 +620,6 @@ a{
 
 .visiting-card-title{
     font-size: 32px;
-    color: #000000;
     letter-spacing: 5px;
     text-transform: uppercase;
     font-weight: 100;
@@ -607,11 +631,14 @@ a{
     height: 2px;
     width: 300px;
     background-color: #710707;
+    transition: 1s;
+}
+.visiting-card:hover .visiting-card-underline{
+    width: 100%;
 }
 
 .visiting-card-subtitle-one{
     font-size: 22px;
-    color: #000000;
     font-family: "Roboto-Light";
     padding-top: 10px;
     padding-bottom: 10px;
@@ -619,7 +646,6 @@ a{
 
 .visiting-card-subtitle-two{
     font-size: 18px;
-    color: #000000;
     font-family: "Roboto-Light";
 }
 
@@ -713,9 +739,16 @@ a{
 }
 
 .playPause{
-    padding-left: 30px;
+    margin-left: 30px;
     width: 23px;
     height: 31px;
+    background-color: #B3B3B3;
+    -webkit-mask-image: url(assets/svg/playPause.svg);
+    -webkit-mask-size: cover;
+}
+.playPause:hover{
+    background-color: #989898;
+    transition: 1s;
 }
 
 .progress {
@@ -732,6 +765,18 @@ a{
     -webkit-appearance: none;
     cursor: ew-resize;
     background: #FFFFFF;
+}
+
+.volume{
+    height: 31px;
+    width: 38px;
+    background-color: #B3B3B3;
+    -webkit-mask-image: url(assets/svg/volume.svg);
+    -webkit-mask-size: cover;
+}
+.volume:hover{
+    background-color: #989898;
+    transition: 1s;
 }
 
 .progressVolume{
@@ -751,14 +796,23 @@ a{
 }
 
 .fullWindow{
-    padding-right: 30px;
+    height: 35px;
+    width: 35px;
+    margin-right: 30px;
+    background-color: #B3B3B3;
+    -webkit-mask-image: url(assets/svg/fullWindow.svg);
+    -webkit-mask-size: cover;
+}
+.fullWindow:hover{
+    background-color: #989898;
+    transition: 1s;
 }
 
 .video-container-players{
-    padding-top: 40px;
+    padding: 40px 0;
     display: flex;
+    flex-wrap: wrap;
     gap: 0 40px;
-    padding-bottom: 40px;
 }
 
 .video-container_pagination{
@@ -1005,6 +1059,11 @@ input[type="number"]:focus {
     height: 50px;
     width: 175px;
     background-color: #000000;
+    transition: 1s;
+}
+.tickets-Button:hover{
+    color: #000000;
+    background-color: #9D8665;
 }
 
 .tickets-parallax{
@@ -1013,6 +1072,7 @@ input[type="number"]:focus {
     background: url(./assets/img/Tickets_parallax.jpg);
     background-size: cover;
     background-attachment: fixed;
+    background-position: center;
 }
 
 /*.....SECTION-TICKETS-END.....*/
@@ -1089,40 +1149,41 @@ input[type="number"]:focus {
     -webkit-mask-size: cover;
     transition: 1s;
 }
-.footer-image-logo:hover{
+.logo:hover .footer-image-logo{
     background-color:#9d8665;
+}
+.logo:hover .text-logo{
+    color:#9d8665;
 }
 
 .text-logo{
     margin-top: 3px;
 }
 
-.footer-menu{
-    display: flex;
-    gap: 0 150px;
-    margin-top: 12px;
-}
-
 .footer-nav{
-    min-width: 107px;
+    height: 128px;
+    width: 363px;
 }
 
 .footer-ul{
     display: flex;
-    flex-direction: column;
-    padding: 0;
-    margin-bottom: 0;
-    list-style: none;
+    flex-wrap: wrap;
+    gap: 25px 150px;
 }
 
 .footer-li{
+    width: 106px;
     font-family: "Roboto-Thin";
     font-size: 22px;
     letter-spacing: 2px;
-    margin-bottom: 25px;
 }
-.footer-li:last-child{
-    margin-bottom: 0;
+
+.footer-li a{
+    color: #FFFFFF;
+    transition: 1s;
+}
+.footer-li a:hover{
+    color: #9D8665;
 }
 
 .footer-right-side{
@@ -1141,14 +1202,81 @@ input[type="number"]:focus {
 }
 
 .social-follow-item{
+    border: #666666 1px solid;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+.social-follow-item a{
     display: flex;
     align-items: center;
     justify-content: center;
     height: 48px;
     width: 48px;
-    border: #666666 1px solid;
-    border-radius: 50%;
-    box-sizing: border-box;
+    transition: 1s;
+    cursor: pointer;
+}
+.social-follow-item a:hover .social-follow-item{
+    border: #9D8665 1px solid;
+}
+
+.social-follow-item .youtube,
+.instagram, .facebook,
+.twitter, .pinterest{
+    transition: 1s;
+}
+
+.social-follow-item:hover .youtube{
+    background-color: #9D8665;
+    
+}
+.social-follow-item:hover .instagram{
+    background-color: #9D8665;
+}
+.social-follow-item:hover .facebook{
+    background-color: #9D8665;
+}
+.social-follow-item:hover .twitter{
+    background-color: #9D8665;
+}
+.social-follow-item:hover .pinterest{
+    background-color: #9D8665;
+}
+
+.youtube{
+    height: 16px;
+    width: 23px;
+    background-color: #FFFFFF;
+    -webkit-mask-image: url(assets/svg/youtube.svg);
+    -webkit-mask-size: cover;
+}
+.instagram{
+    height: 20px;
+    width: 20px;
+    background-color: #FFFFFF;
+    -webkit-mask-image: url(assets/svg/instagram.svg);
+    -webkit-mask-size: cover;
+}
+.facebook{
+    height: 20px;
+    width: 13px;
+    background-color: #FFFFFF;
+    -webkit-mask-image: url(assets/svg/facebook.svg);
+    -webkit-mask-size: cover;
+}
+.twitter{
+    height: 16px;
+    width: 20px;
+    background-color: #FFFFFF;
+    -webkit-mask-image: url(assets/svg/twitter.svg);
+    -webkit-mask-size: cover;
+}
+.pinterest{
+    height: 24px;
+    width: 24px;
+    background-color: #FFFFFF;
+    -webkit-mask-image: url(assets/svg/pinterest.svg);
+    -webkit-mask-size: cover;
 }
 
 .footer-line{
