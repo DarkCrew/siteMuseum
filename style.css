@@ -135,14 +135,6 @@ html {
 }
 
 /**
- * Address `outline` inconsistency between Chrome and other browsers.
- */
-
-a:focus {
-    outline: thin dotted;
-}
-
-/**
  * Improve readability when focused and also mouse hovered in all browsers.
  */
 
@@ -396,6 +388,10 @@ img{
 
 /*.....reset-end.....*/
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     margin: 0;
 }
@@ -407,7 +403,12 @@ a{
 
 .container{
     margin: 0 auto;
-    width: 1440px;
+    max-width: 1440px;
+}
+
+.light-section{
+    padding-top: 75px;
+    padding-bottom: 75px;
 }
 
 .section-title-container{
@@ -469,12 +470,18 @@ a{
     justify-content: space-between;
     width: 199px;
     height: 33px;
-}
+} 
 
 .image-logo{
     width: 49px;
     height: 26px;
-    background-image: url(assets/svg/logo.svg);
+    background-color: #fff;
+    -webkit-mask-image: url(assets/svg/logo.svg);
+    -webkit-mask-size: cover;
+    transition: 1s;
+}
+.image-logo:hover{
+    background-color:#9d8665;
 }
 
 .text-logo{
@@ -502,6 +509,7 @@ a{
 .header-li{
     font-family: "Roboto-Thin";
     font-size: 22px;
+    line-height: 22px;
     letter-spacing: 2px;
 }
 
@@ -514,7 +522,6 @@ a{
 .welcome{
     height: 810px;
     background-color: #030303;
-    margin-bottom: 75px;
 }
 
 .welcome-container{
@@ -570,10 +577,6 @@ a{
 
 /*.....SECTION-VISITING.....*/
 
-.visiting{
-    margin-bottom: 75px;
-}
-
 .container-cards{
     display: flex;
     flex-wrap: wrap;
@@ -626,7 +629,6 @@ a{
 
 .explore{
     background-color: #030303;
-    margin-bottom: 75px;
 }
 
 .explore-container{
@@ -665,10 +667,6 @@ a{
 /*.....SECTION-EXPLORE-END.....*/
 
 /*.....SECTION-VIDEO-START.....*/
-
-.video{
-    margin-bottom: 75px;
-}
 
 .video-title-container{
     display: flex;
@@ -800,7 +798,6 @@ a{
 
 .gallery{
     background: #030303;
-    margin-bottom: 75px;
 }
 
 .gallery-container{
@@ -811,13 +808,39 @@ a{
     padding-bottom: 75px;
 }
 
+.picture-container{
+    position: relative;
+    height: 1960px;
+    overflow-y: hidden;
+}
+.picture-inner-container{
+    height: 3000px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px 36px;
+}
+
+.image-galery{
+    width: 456px;
+}
+
+.image-galery image{
+    margin-top: 50px;
+}
+
+.galery-box-shadow{
+    width: 1440px;
+    height: 360px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    left: 0;
+}
+
 /*.....SECTION-GALLERY-END.....*/
 
 /*.....SECTION-TICKETS-START.....*/
-
-.tickets{
-    margin-bottom: 75px;
-}
 
 .tickets-container{
     padding-bottom: 75px;
@@ -884,6 +907,17 @@ a{
     border: 2px solid #000000;
     border-radius: 50%;
     box-sizing: border-box;
+}
+
+/* On mouse-over, add a grey background color */
+.label-container:hover input ~ .checkmark{
+    transition: .5s;
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a black background */
+.label-container input:checked ~ .checkmark{
+    background-color: #000000;
 }
 
 .ticket-form-amount-item{
@@ -986,7 +1020,7 @@ input[type="number"]:focus {
 /*.....SECTION-CONTACTS-START.....*/
 
 .contacts{
-    margin-bottom: 75px;
+    padding-top: 0px;
 }
 
 .contacts-title{
@@ -1048,9 +1082,15 @@ input[type="number"]:focus {
 }
 
 .footer-image-logo{
-    height: 34px;
-    width: 50px;
-    background-image: url(assets/svg/footer-logo.svg);
+    width: 49px;
+    height: 26px;
+    background-color: #fff;
+    -webkit-mask-image: url(assets/svg/footer-logo.svg);
+    -webkit-mask-size: cover;
+    transition: 1s;
+}
+.footer-image-logo:hover{
+    background-color:#9d8665;
 }
 
 .text-logo{
