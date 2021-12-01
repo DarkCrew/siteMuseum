@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Museum</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
     <link rel="icon" href="./assets/favicon.ico">
 </head>
 <body>
@@ -27,6 +28,11 @@
                     <li class="header-li"><a href="#contacts">Contacts</a></li>
                 </ul>
             </nav>
+            <div class="burger-menu">
+                <label class="menu-btn">
+                    <span></span>
+                </label>
+            </div>
         </div>
     </header>
     <main class="main">
@@ -34,16 +40,54 @@
         <!-- WELCOME SECTION -->
         <section class="welcome">
             <div class="container welcome-container">
-                <div class="welcome-slider">
-                    <img src="assets/img/Welcome.jpg" alt="welcome-slider">
-                </div>
-                <div class="welcome-slider-pagination">
-                    <img src="assets/img/Slider pagination.jpg" alt="welcome-slider-pagination">
-                </div>
                 <div class="welcome-block">
                     <h1 class="section-title">Welcome<br> to the louvre</h1>
                     <p class="welcome-block-subtitle">From the castle to the museum</p>
                     <a href="https://www.google.com/maps/@48.8618159,2.3366818,3a,75y,81.55h,73.4t/data=!3m7!1e1!3m5!1sAF1QipOVxZQuSy3Bx9T_HpH_7FtBHDTXvI6SF-A10ocT!2e10!3e12!7i5472!8i2736" class="welcome-block-button" target="_blank">Discover the louvre</a>
+                </div>
+                <div class="welcome-slider">
+                    <div class="welcome-slider-container">
+                        <div class="welcome-slider-shadow">
+                            <img src="assets/img/welcome-slider-shadow.png" alt="welcome-slider-shadow">
+                        </div>
+                        <div class="welcome-item-container">
+                            <div class="item active">
+                                <img src="assets/img/Welcome.jpg" alt="welcome-slider">
+                            </div>
+                            <div class="item">
+                                <img src="assets/img/Welcome2.jpg" alt="welcome-slider">
+                            </div>
+                            <div class="item">
+                                <img src="assets/img/Welcome3.jpg" alt="welcome-slider">
+                            </div>
+                            <div class="item">
+                                <img src="assets/img/Welcome4.jpg" alt="welcome-slider">
+                            </div>
+                            <div class="item">
+                                <img src="assets/img/Welcome5.jpg" alt="welcome-slider">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="welcome-slider-pagination">
+                        <div class="slider-container">
+                            <div class="slider-page-number">
+                                <p class="page-number first">01</p>
+                                <p class="page-number delimiter">|</p>
+                                <p class="page-number second">05</p>
+                            </div>
+                            <div class="slider-squares">
+                                <span class="slider-square active"></span>
+                                <span class="slider-square"></span>
+                                <span class="slider-square"></span>
+                                <span class="slider-square"></span>
+                                <span class="slider-square"></span>
+                            </div>
+                            <div class="slider-arrows">
+                                <div class="slider-arrow-left"></div>
+                                <div class="slider-arrow-right"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -108,15 +152,15 @@
                     <div class="section-title-container">
                         <h2 class="section-title underline-title">Picture Explore</h2>
                     </div>
-                    <p class="explore-subtitle">
+                    <div class="explore-subtitle">
                         Las Meninas is a 1656 painting by Diego Velázquez, the leading artist of the Spanish Golden Age.
-                    </p>
-                    <p class="explore-subtitle">
+                    </div>
+                    <div class="explore-subtitle">
                         It was cleaned in 1984 to remove a <span>"yellow veil"</span> of dust that had gathered since the previous restoration in the 19th century.
-                    </p>
-                    <p class="explore-subtitle">
+                    </div>
+                    <div class="explore-subtitle">
                         The cleaning provoked furious protests, not because the picture had been damaged in any way, but because it looked different.
-                    </p>
+                    </div>
                 </div>
                 <img src="./assets/img/PictureExplore.jpg" alt="PictureExplore" class="explore-picture">
             </div>
@@ -141,21 +185,68 @@
                             <button class="fullWindow"></button>
                         </div>
                     </div>
-                    <div class="video-container-players">
-                        <iframe width="452" height="254" src="https://www.youtube.com/embed/aWmJ5DgyWPI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <iframe width="452" height="254" src="https://www.youtube.com/embed/Vi5D6FKhRmo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <iframe width="452" height="254" src="https://www.youtube.com/embed/NOhDysLnTvY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+
+                <div class="slick-slider-players">
+                    <div class="slider_item">
+                        <iframe width="100%" height="100%"
+                            src="https://www.youtube.com/embed/zp1BXPX8jcU"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                            loading="lazy">
+                        </iframe>
                     </div>
-                    <div class="video-container_pagination">
-                        <div class="video-slider-pagination">
-                            <button class="arrow-left"><img src="./assets/img/arrow-left.png" alt="arrow-left"></button>
-                            <span class="slider-circle selected"></span>
-                            <span class="slider-circle"></span>
-                            <span class="slider-circle"></span>
-                            <span class="slider-circle"></span>
-                            <span class="slider-circle"></span>
-                            <button class="arrow-right"><img src="./assets/img/arrow-right.png" alt="arrow-right"></button>
+                    <div class="slider_item">
+                        <iframe width="100%" height="100%" 
+                            src="https://www.youtube.com/embed/Vi5D6FKhRmo"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                    <div class="slider_item">
+                        <iframe width="100%" height="100%"
+                            src="https://www.youtube.com/embed/NOhDysLnTvY"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                    <div class="slider_item">
+                        <iframe width="100%" height="100%"
+                            src="https://www.youtube.com/embed/aWmJ5DgyWPI"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                    <div class="slider_item">
+                        <iframe width="100%" height="100%"
+                            src="https://www.youtube.com/embed/2OR0OCr6uRE"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="video-container_pagination">
+                    <div class="video-slider-pagination">
+                        <button class="arrow-left"><img src="./assets/img/arrow-left.png" alt="arrow-left"></button>
+                        <div class="video-slider-pagination-circles">
+
                         </div>
+                        <button class="arrow-right"><img src="./assets/img/arrow-right.png" alt="arrow-right"></button>
                     </div>
                 </div>
             </div>
@@ -221,12 +312,179 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="tickets-Button">Buy Now</button>
+                        <button class="tickets-Button"><a href="#popup">Buy Now</a></button>
                     </form>
                 </div>
             </div>
 
             <div class="tickets-parallax"></div>
+
+            <div class="wrapper-form" id="popup">
+                <form class="popUp">
+                    <div class="popUp-container">
+                        <div class="popUp-subcontainer-left">
+                            <div class="form-title-container">
+                                <div class="form-logo"></div>
+                                <h4 class="form-title">Booking tickets</h4>
+                                <p class="form-subtitle">Tour to Louvre</p>
+                                <div class="form-divider"></div>
+                            </div>
+                            <div class="form-input-container">
+                                <div class="form">
+                                    <input placeholder="Date" class="form-input-item input-item-date" type="text" onfocus="(this.type='date')">
+                                    <div class="form-date-select">
+                                        <div class="form-date-select-item"></div>
+                                    </div>
+                                </div>
+                                <div class="form">
+                                    <input placeholder="Time" class="form-input-item input-item-time" type="text" onfocus="(this.type='time')">
+                                    <div class="form-date-select">
+                                        <div class="form-date-select-item"></div>
+                                    </div>
+                                </div>
+                                <div class="form big"><input placeholder="Name" class="form-input-item input-item-name" type="text"></div>
+                                <div class="form big"><input placeholder="E-mail" class="form-input-item input-item-email" type="email"></div>
+                                <div class="form big"><input placeholder="Phone" class="form-input-item input-item-phone" type="tel"></div>
+                                <div class="form big">
+                                    <select name="ticket-type" class="form-input-item input-item-type">
+                                        <option value="" disabled selected>Ticket Type</option>
+                                        <option value="value1">Permanent exhibition</option>
+                                        <option value="value2">Temporary exhibition</option>
+                                        <option value="value3">Combined Admission</option>
+                                    </select>
+                                    <div class="form-date-select">
+                                        <div class="form-date-select-item"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-entry-ticket-container">
+                                <div class="form-entry-ticket">
+                                    <h5 class="form-entry-title">Entry ticket</h5>
+                                    <div class="form-entry-divider"></div>
+                                    <div class="form-entry-amount">
+                                        <div class="form-amount first">
+                                            <p class="form-entry-amount-title">Basic 18+ (20 €)</p>
+                                            <div class="form-amount-item">
+                                                <button class="form-button-minus" type="button" onclick="this.nextElementSibling.stepDown()">–</button>
+                                                <input type="number" value="1" min="0" max="20" readonly class="number">
+                                                <button class="form-button-plus" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
+                                            </div>
+                                        </div>
+                                        <div class="form-amount second">
+                                            <p class="form-entry-amount-title">Senior 65+ (10 €)</p>
+                                            <div class="form-amount-item">
+                                                <button class="form-button-minus" type="button" onclick="this.nextElementSibling.stepDown()">–</button>
+                                                <input type="number" value="1" min="0" max="20" readonly class="number">
+                                                <button class="form-button-plus" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popUp-subcontainer-right">
+                            <div class="popUp-right-shell">
+                                <div class="form-overview-container">
+                                    <div class="form-overview-info">
+                                        <h4 class="form-overview-title">Overview</h4>
+                                        <h5 class="form-overview-subtitle">Tour to Louvre</h5>
+                                        <div class="form-overview-result">
+                                            <div class="form-overview-image calendar"></div>
+                                            <p class="form-overiview-image-definition">Friday, August 19</p>
+                                        </div>
+                                        <div class="form-overview-result">
+                                            <div class="form-overview-image time"></div>
+                                            <p class="form-overiview-image-definition">16 : 30</p>
+                                        </div>
+                                        <div class="form-overview-result">
+                                            <div class="form-overview-image type"></div>
+                                            <p class="form-overiview-image-definition">Temporary exhibition</p>
+                                        </div>
+                                    </div>
+                                    <div class="form-overview-photo"></div>
+                                </div>
+                                <div class="form-total-container">
+                                    <div class="form-total-line">
+                                        <div class="form-total-line-title">
+                                            <div class="line-title-number-container">
+                                                <p class="line-title-number">2</p>
+                                            </div>
+                                            <p class="line-title">Basic (20 €)</p>
+                                        </div>
+                                        <p class="form-total-line-price">40 €</p>
+                                    </div>
+                                    <div class="form-total-line last">
+                                        <div class="form-total-line-title">
+                                            <div class="line-title-number-container">
+                                                <p class="line-title-number">2</p>
+                                            </div>
+                                            <p class="line-title">Senior (10 €)</p>
+                                        </div>
+                                        <p class="form-total-line-price">20 €</p>
+                                    </div>
+                                    <div class="form-total-divider"></div>
+                                    <div class="form-total-sum">
+                                        <p class="form-total-sum-title">Total:</p>
+                                        <p class="form-total-sum-number">60 €</p>
+                                    </div>
+                                </div>
+                                <div class="form-card-container">
+                                    <div class="form-card-front">
+                                        <div class="form-card-info-container">
+                                            <div class="form-card-front-first">
+                                                <div class="form-card-front-input">
+                                                    <p class="form-front-card-title">Card number</p>
+                                                    <div class="form-cardnumber-front-input">
+                                                        <input type="text">
+                                                    </div>
+                                                    <p class="form-front-card-title">Expiration date</p>
+                                                    <div class="form-front-card-date">
+                                                        <div class="form-cardnumber-front-input">
+                                                            <input type="text" onfocus="(this.type='date')">
+                                                        </div>
+                                                        <div class="form-cardnumber-front-input">
+                                                            <input type="text" onfocus="(this.type='date')">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-card-front-logo">
+                                                    <div class="form-front-logo-visa"></div>
+                                                    <div class="form-front-logo-mastercard"></div>
+                                                </div>
+                                            </div>
+                                            <p class="form-front-card-title">Cardholder name</p>
+                                            <div class="form-cardnumber-front-input">
+                                                <input type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-card-back">
+                                        <div class="form-card-back-black-line"></div>
+                                        <div class="form-card-info-container card-back">
+                                            <div class="form-card-back-rightside">
+                                                <p class="form-card-back-cvc">CVC/CVV</p>
+                                                <div class="form-cardnumber-back-input">
+                                                    <input type="text">
+                                                </div>
+                                                <p class="form-card-back-cvc-discription">The last 3 or 4 digits on back of the card</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-Button-container">
+                                    <button class="form-Button"><a href="#tickets">Book</a></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#tickets">
+                        <div class="popUp-close-button">
+                            <div class="popUp-close-button-line left"></div>
+                            <div class="popUp-close-button-line right"></div>
+                        </div>
+                    </a>
+                </form>
+            </div>
         </section> 
         
         <!-- CONTACTS SECTION -->
@@ -293,7 +551,14 @@
                 </div>
             </div>
         </section>
+
     </main>
+
+    <!--Подключаем jQuery-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!--Подключаем slider Slick-->
+    <script src="./slick.min.js"></script>
+
     <script src="./index.js"></script>
     <script src="./gallery.js"></script>
 </body>

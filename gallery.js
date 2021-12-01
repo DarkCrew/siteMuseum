@@ -18,7 +18,6 @@ function randomGalery(){
     
     for(let i = 0; i < 15; i++){
         const img = document.createElement('img');
-        img.classList.add(`image-galery`);
         img.src = massivGalery[i];
         img.alt = `galery${i+1}`;
         pictureInnerContainer.append(img);
