@@ -10,6 +10,8 @@ progressVolume.addEventListener('input', function(){
     this.style.background = `linear-gradient(to right, #710707 0%, #710707 ${valueVolume}%, #fff ${valueVolume}%, white 100%)`
 })
 
+
+
 //animation slider start
 
 const btnPrev = document.querySelector('.slider-arrow-left');
@@ -78,9 +80,9 @@ btnPrev.addEventListener('click', prevSlide);
 
 setInterval(nextSlide, 4000);
 
-
-
 //animation slider end
+
+
 
 
 $(document).ready(function(){
@@ -97,3 +99,28 @@ $(document).ready(function(){
     appendDots: $('.video-slider-pagination-circles')
   });
 })
+
+const btnWelcomeMenu = document.querySelector('.burger-menu');
+const stateWelcomeBtn = document.querySelector('.welcome-pop-up-menu');
+const welcomeMenuIcon = document.querySelector('.menu-icon');
+const welcomeMenuItems = document.querySelectorAll('.welcome-pop-up-li');
+
+btnWelcomeMenu.addEventListener('click', () => {
+  stateWelcomeBtn.classList.toggle('active');
+  welcomeMenuIcon.classList.toggle('active');
+})
+
+if(window.innerWidth <= 1024){
+
+  for (let i = 0; i < welcomeMenuItems.length; i++){
+    welcomeMenuItems[i].addEventListener('click', () => {
+      stateWelcomeBtn.classList.remove('active');
+      welcomeMenuIcon.classList.toggle('active');
+    });
+  };
+}
+
+
+
+
+
