@@ -104,10 +104,12 @@ const btnWelcomeMenu = document.querySelector('.burger-menu');
 const stateWelcomeBtn = document.querySelector('.welcome-pop-up-menu');
 const welcomeMenuIcon = document.querySelector('.menu-icon');
 const welcomeMenuItems = document.querySelectorAll('.welcome-pop-up-li');
+const welcomeBlock = document.querySelector('.welcome-block');
 
 btnWelcomeMenu.addEventListener('click', () => {
   stateWelcomeBtn.classList.toggle('active');
   welcomeMenuIcon.classList.toggle('active');
+  welcomeBlock.classList.toggle('hide');
 })
 
 if(window.innerWidth <= 1024){
@@ -116,6 +118,7 @@ if(window.innerWidth <= 1024){
     welcomeMenuItems[i].addEventListener('click', () => {
       stateWelcomeBtn.classList.remove('active');
       welcomeMenuIcon.classList.toggle('active');
+      welcomeBlock.classList.toggle('hide');
     });
   };
 }

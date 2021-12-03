@@ -613,6 +613,7 @@ a{
     left: 0;
     opacity: 1;
     visibility: visible;
+    transition: 1s;
 }
 
 .welcome-block{
@@ -621,6 +622,9 @@ a{
     top: 150px;
     width: 598px;
     height: 388px;
+}
+.welcome-block.hide{
+    display: none;
 }
 
 .welcome-block-subtitle{
