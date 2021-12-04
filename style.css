@@ -531,7 +531,7 @@ a{
 .burger-menu{
     display: none;
     position: relative;
-    width: 35px;
+    width: 32px;
     height: 18px;
 }
 
@@ -599,10 +599,11 @@ a{
 }
 
 .welcome-pop-up-menu{
-    z-index: 100;
+    z-index: 1000;
     position: absolute;
     height: 585px;
     width: 277px;
+    top: 0;
     background-color: #030303;
     transition: 1s;
     left: -100%;
@@ -615,6 +616,55 @@ a{
     visibility: visible;
     transition: 1s;
 }
+
+.welcome-pop-up{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    z-index: 100;
+    height: 100%;
+    width: 100%;
+    background-color: #030303;
+}
+
+.welcome-pop-up.active{
+    display: flex;
+}
+
+.welcome-pop-up-photo{
+    width: 90.38%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 333px;
+}
+
+.welcome-pop-up-photo-1row img{
+    width: 100%;
+    margin-bottom: 3.13%;
+}
+
+.welcome-pop-up-photo-2row{
+    width: 100%;
+    display: flex;
+    gap: 3%;
+}
+
+.welcome-pop-up-photo-2row img{
+    width: 48.5%;
+}
+
+.welcome-pop-up-line{
+    height: 1px;
+    width: 100%;
+    background: #FFFFFF;
+    margin: 35px 0;
+}
+
+.footer-right-side.welcome-footer{
+    justify-content: center;
+    margin-right: 0;
+}
+
 
 .welcome-block{
     z-index: 10;
@@ -829,6 +879,7 @@ a{
 .container-cards{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 75px 60px;
 }
 
@@ -991,6 +1042,25 @@ a{
 .progress::-webkit-slider-thumb {
     width: 15px;
     height: 15px;
+    border-radius: 50%;
+    -webkit-appearance: none;
+    cursor: ew-resize;
+    background: #FFFFFF;
+}
+
+.progressMobile{
+    display: none;
+    z-index: 10;
+    background: linear-gradient(to right, #710707 0%, #710707 40%, #fff 40%, #fff 100%);
+    height: 5px;
+    width: 100%;
+    transition: background 450ms ease-in;
+    -webkit-appearance: none;
+}
+
+.progressMobile::-webkit-slider-thumb {
+    width: 13px;
+    height: 13px;
     border-radius: 50%;
     -webkit-appearance: none;
     cursor: ew-resize;
@@ -2268,6 +2338,10 @@ select{
         display: block;
     }
 
+    .header-nav{
+        display: none;
+    }
+
     .header-ul{
         display: none;
     }
@@ -2321,9 +2395,6 @@ select{
 
     .welcome-slider-pagination{
         width: 700px;
-    }
-
-    .welcome-slider-pagination{
         justify-content: end;
     }
 
@@ -2362,8 +2433,7 @@ select{
     }
 
     .container-cards {
-        margin: 0 auto;
-        width: 768px;
+        width: 100%;
         gap: 60px 108px;
     }
 
@@ -2377,6 +2447,10 @@ select{
         letter-spacing: 3px;
     }
 
+    .visiting-card-underline {
+        width: 150px;
+    }
+
     .visiting-card-subtitle-one {
         font-size: 20px;
     }
@@ -2387,6 +2461,7 @@ select{
 
     .explore-container {
         flex-direction: column;
+        padding-top: 60px;
         padding-bottom: 60px;
     }
 
@@ -2418,6 +2493,21 @@ select{
 
     .video-subtitle{
         display: none;
+    }
+
+    #bigPlayButton img{
+        height: 152px;
+        width: 152px;
+    }
+
+    .slick-slide{
+        height: 170px;
+        width: 300px;
+        margin-right: 41px;
+    }
+
+    .gallery-container {
+        padding-top: 60px;
     }
 
     .picture-inner-container{
@@ -2568,6 +2658,312 @@ select{
         color: #7E6C51;
     }
     
+}
+
+
+@media (max-width: 768px){
+    .header {
+        height: 110px;
+    }
+
+    .welcome {
+        height: 861px;
+    }
+
+    .welcome-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        text-align: center;
+    }
+
+    .welcome-block {
+        height: 165px;
+        width: 332px;
+        top: 0;
+        margin-bottom: 50px;
+    }
+
+    .section-title {
+        font-size: 40px;
+        line-height: 60px;
+    }
+
+    .welcome-block-subtitle {
+        font-size: 20px;
+    }
+
+    .welcome-block-button {
+        display: none;
+    }
+
+    .welcome-slider-shadow img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .welcome-slider {
+        height: 646px;
+        width: 100%;
+    }
+
+    .welcome-slider-pagination{
+        width: 100%;
+        justify-content: center;
+    }
+
+    .slider-container {
+        margin-right: 0;
+    }
+
+    .light-section {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .section-title-container {
+        padding-bottom: 63px;
+    }
+
+    .section-title-dark {
+        font-size: 40px;
+        line-height: 60px;
+    }
+
+    .container-cards {
+        gap: 40px 56px;
+    }
+
+    .visiting-card-image {
+        height: 180px;
+        width: 280px;
+    }
+
+    .visiting-card-title {
+        font-size: 22px;
+    }
+
+    .visiting-card-subtitle-one {
+        font-size: 18px;
+    }
+
+    .explore-container {
+        flex-direction: column;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .explore-info {
+        padding-bottom: 0;
+    }
+
+    .explore-subtitle {
+        display: none;
+    }
+
+    .explore-picture {
+        height: 100%;
+        width: 100%;
+    }
+
+    .video-title-container {
+        padding-bottom: 20px;
+    }
+
+    #bigPlayButton img{
+        height: 80px;
+        width: 80px;
+    }
+
+    .video-player-controls {
+        height: 53px;
+    }
+
+    .playPause {
+        height: 29px;
+    }
+
+    .progress{
+        display: none;
+    }
+
+    .progressMobile{
+        display: block;
+    }
+
+    .volume {
+        height: 21px;
+        width: 27px;
+    }
+
+    .fullWindow {
+        height: 27px;
+        width: 27px;
+    }
+
+    .progressVolume {
+        height: 5px;
+        width: 60%;
+    }
+
+    .progressVolume::-webkit-slider-thumb{
+        width: 13px;
+        height: 13px;
+    }
+
+    .slick-slider-players {
+        margin: 20px 0;
+    }
+
+    .slick-slide{
+        height: 199px;
+        width: 354px;
+        margin-right: 20px;
+    }
+
+    .video-slider-pagination {
+        margin-bottom: 40px;
+    }
+
+    .gallery-container {
+        padding-top: 40px;
+    }
+
+    .picture-container {
+        height: 1760px;
+    }
+
+    .picture-inner-container{
+        column-gap: 24px;
+    }
+    
+    .picture-inner-container img{
+        width: 352px;
+    }
+
+    .section-title-container {
+        padding-bottom: 63px;
+    }
+
+    .tickets-form-container img {
+        height: 340px;
+        width: 444px;
+    }
+
+    .tickets-form {
+        padding-left: 60px;
+        margin-right: 49px;
+    }
+
+    .ticket-title {
+        margin-bottom: 39px;
+    }
+
+    .total-amount {
+        margin-top: 14px;
+    }
+
+    .tickets-options {
+        padding-bottom: 40px;
+    }
+
+    .tickets-container {
+        padding-bottom: 40px;
+    }
+
+    .tickets-parallax {
+        height: 300px;
+    }
+
+    .contacts-title {
+        margin-bottom: 63px;
+    }
+
+    .contacts-address-container {
+        flex-direction: column;
+    }
+
+    .contacts-map{
+        width: 100%;
+    }
+
+    .contacts-map img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .contacts-address-title {
+        font-size: 20px;
+        margin-bottom: 40px;
+    }
+
+    .contacts-address-subtitle {
+        font-size: 18px;
+    }
+
+    .contacts-address {
+        margin-bottom: 40px;
+    }
+
+    .footer {
+        padding-top: 40px;
+    }
+
+    .footer-container {
+        height: 100%;
+    }
+
+    .logo {
+        height: 41px;
+        align-items: center;
+    }
+
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-logo {
+        margin-right: 80px;
+    }
+
+    .footer-nav {
+        margin-top: 17px;
+    }
+
+    .footer-left-side {
+        margin-bottom: 42px;
+    }
+
+    .footer-right-side {
+        justify-content: flex-end;
+        margin-right: 90px;
+    }
+
+    .footer-line {
+        height: 1px;
+        margin: 40px 0;
+    }
+
+    .wrapper-form {
+        overflow-y: scroll;
+    }
+
+    .popUp {
+        height: 1479px;
+        width: 590px;
+    }
+
+    .popUp-container {
+        flex-direction: column;
+        margin: 75px auto;
+        height: 663px;
+        width: 970px;
+    }
+
+    .welcome-pop-up-menu{
+        height: 333px;
+    }
 }
 
 

@@ -4,6 +4,12 @@ progress.addEventListener('input', function() {
   this.style.background = `linear-gradient(to right, #710707 0%, #710707 ${value}%, #fff ${value}%, white 100%)`
 })
 
+const progressMobile = document.querySelector('.progressMobile');
+progressMobile.addEventListener('input', function() {
+  const value = this.value;
+  this.style.background = `linear-gradient(to right, #710707 0%, #710707 ${value}%, #fff ${value}%, white 100%)`
+})
+
 const progressVolume = document.querySelector('.progressVolume')
 progressVolume.addEventListener('input', function(){
     const valueVolume = this.value;
@@ -105,23 +111,28 @@ const stateWelcomeBtn = document.querySelector('.welcome-pop-up-menu');
 const welcomeMenuIcon = document.querySelector('.menu-icon');
 const welcomeMenuItems = document.querySelectorAll('.welcome-pop-up-li');
 const welcomeBlock = document.querySelector('.welcome-block');
+const welcomePopUp = document.querySelector('.welcome-pop-up');
 
-btnWelcomeMenu.addEventListener('click', () => {
+const changeStateWelcomeMenu = () => {
   stateWelcomeBtn.classList.toggle('active');
   welcomeMenuIcon.classList.toggle('active');
   welcomeBlock.classList.toggle('hide');
+  welcomePopUp.classList.toggle('active');
+}
+
+btnWelcomeMenu.addEventListener('click', () => {
+  changeStateWelcomeMenu();
 })
 
 if(window.innerWidth <= 1024){
-
   for (let i = 0; i < welcomeMenuItems.length; i++){
     welcomeMenuItems[i].addEventListener('click', () => {
-      stateWelcomeBtn.classList.remove('active');
-      welcomeMenuIcon.classList.toggle('active');
-      welcomeBlock.classList.toggle('hide');
+      changeStateWelcomeMenu();
     });
   };
 }
+
+
 
 
 
