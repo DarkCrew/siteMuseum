@@ -1207,18 +1207,19 @@ a{
 
 .tickets-form-container{
     display: flex;
+    flex-wrap: wrap;
 }
 
 .tickets-form-container img{
-    height: 550px;
-    width: 720px;
+    height: 100%;
+    width: 50%;
 }
 
 .tickets-form{
     display: flex;
     flex-direction: column;
-    padding-left: 60px;
-    width: 100%;
+    padding-left: 5%;
+    width: 45%;
     right: 0;
 }
 
@@ -1349,6 +1350,8 @@ input[type="number"]:focus {
 .total-amount{
     margin-top: 50px;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .ticket-amount-title{
@@ -1359,13 +1362,13 @@ input[type="number"]:focus {
 }
 
 .tickets-Button{
-    align-self:flex-end;
+    margin-top: 50px;
     font-size: 22px;
     letter-spacing: 2px;
     color: #FFFFFF;
     font-family: "Roboto-Light";
     height: 50px;
-    width: 175px;
+    width: 100%;
     background-color: #000000;
     transition: 1s;
 }
@@ -1413,7 +1416,7 @@ input[type="number"]:focus {
 
 .popUp{
     display: flex;
-    position: fixed;
+    position: absolute;
     height: 845px;
     width: 1440px;
     background-color: #FFFFFF;
@@ -2519,14 +2522,13 @@ select{
     }
 
     .tickets-form-container img{
-        height: 440px;
-        width: 700px;
+        height: 100%;
+        width: 71%;
     }
 
     .tickets-form {
-        padding-left: 80px;
-        width: 175px;
-        margin-right: 29px;
+        padding-left: 8%;
+        width: 17.7%;
         justify-content: space-between;
     }
 
@@ -2557,10 +2559,6 @@ select{
 
     .total-amount {
         margin-top: 0;
-    }
-
-    .ticket-amount-title.sum{
-        margin-left: 13px;
     }
 
     .tickets-container{
@@ -2847,13 +2845,14 @@ select{
     }
 
     .tickets-form-container img {
-        height: 340px;
-        width: 444px;
+        height: 79%;
+        width: 60%;
     }
 
     .tickets-form {
-        padding-left: 60px;
-        margin-right: 49px;
+        width: 24%;
+        padding-left: 8%;
+        margin-right: 6.7%;
     }
 
     .ticket-title {
@@ -2945,25 +2944,72 @@ select{
         margin: 40px 0;
     }
 
-    .wrapper-form {
-        overflow-y: scroll;
+    .wrapper-form{
+        height: 100%;
+        width: 100%;
+        overflow-y: auto;
     }
-
+    
     .popUp {
+        top: 0;        
         height: 1479px;
         width: 590px;
+        box-sizing: border-box;
     }
 
     .popUp-container {
         flex-direction: column;
-        margin: 75px auto;
-        height: 663px;
-        width: 970px;
+        align-items: center;
+        margin: 0 auto;
+        height: 100%;
+        width: 100%;
+    }
+
+    .popUp-subcontainer-left {
+        margin-top: 80px;
+        margin-bottom: 51px;
+        height: 100%;
+        width: 530px;
+    }
+
+    .form-title-container {
+        margin-bottom: 40px;
+    }
+
+    .form-input-container {
+        justify-content: space-between;
+    }
+
+    .form {
+        width: 48%;
+    }
+
+    .form-entry-ticket {
+        height: 81.5%;
+        width: 94.5%;
+    }
+
+    .form-amount {
+        width: 100%;
+    }
+
+    .popUp-subcontainer-right {
+        margin-bottom: 40px;
+        box-sizing: border-box;
     }
 
     .welcome-pop-up-menu{
         height: 333px;
     }
+}
+
+@media (max-width:420px){
+    
+
+
+
+
+
 }
 
 
