@@ -670,8 +670,6 @@ a{
     z-index: 10;
     position: absolute;
     top: 150px;
-    width: 598px;
-    height: 388px;
 }
 .welcome-block.hide{
     display: none;
@@ -806,7 +804,8 @@ a{
     height: 8px;
     width: 30px;
     background-color: #fff;
-    -webkit-mask-image: url(assets/svg/slider-right-arrow.svg);
+    -webkit-mask-image: url(assets/svg/slider-left-arrow.svg);
+    transform: scale(-1,1);
     -webkit-mask-size: cover;
     transition: 1s;
     cursor: pointer;
@@ -2229,6 +2228,7 @@ select{
     display: flex;
     justify-content: space-between;
     height: 24px;
+    align-items: center;
 }
 
 .footer-main-item{
@@ -2353,12 +2353,18 @@ select{
         height: 585px;
     }
 
+    .welcome-container{
+        display: flex;
+        justify-content: flex-end;
+    }
+
     .section-title{
         font-size: 50px;
     }
 
     .welcome-block{
         top: 50px;
+        left: 0;
     }
 
     .welcome-block-subtitle{
@@ -2372,7 +2378,8 @@ select{
     }
 
     .welcome-slider{
-        height: 585px;
+        height: 100%;
+        position: static;
         width: 700px;
     }
 
@@ -2382,12 +2389,13 @@ select{
     }
 
     .welcome-slider-shadow img{
-        height: 525px;
+        height: 100%;
+        position: static;
         width: 100%;
     }
 
     .welcome-item-container{
-        height: 525px;
+        height: 100%;
         width: 100%;
     }
 
@@ -2665,7 +2673,7 @@ select{
     }
 
     .welcome {
-        height: 861px;
+        height: auto;
     }
 
     .welcome-container {
@@ -2677,8 +2685,7 @@ select{
     }
 
     .welcome-block {
-        height: 165px;
-        width: 332px;
+        position: static;
         top: 0;
         margin-bottom: 50px;
     }
@@ -2702,11 +2709,16 @@ select{
     }
 
     .welcome-slider {
-        height: 646px;
+        height: 75%;
         width: 100%;
     }
 
+    .welcome-slider-container{
+        height: 84%;
+    }
+
     .welcome-slider-pagination{
+        height: 14%;
         width: 100%;
         justify-content: center;
     }
@@ -3005,10 +3017,267 @@ select{
 
 @media (max-width:420px){
     
+    .header {
+        height: 90px;
+    }
 
+    .logo {
+        width: 131px;
+        height: 20px;
+    }
 
+    .text-logo {
+        font-size: 16px;
+        margin-top: 2px;
+    }
 
+    .image-logo {
+        width: 29px;
+        height: 16px;
+    }
 
+    .section-title {
+        font-size: 28px;
+        line-height: 40px;
+    }
+
+    .welcome-block-subtitle {
+        font-size: 16px;
+    }
+
+    .welcome-slider {
+        width: 100%;
+    }
+
+    .slider-container{
+        height: 40px;
+        width: 230px;
+    }
+
+    .slider-page-number {
+        font-size: 16px;
+    }
+
+    .slider-squares {
+        height: 7px;
+        width: 75px;
+    }
+
+    .slider-square {
+        height: 7px;
+        width: 7px;
+    }
+
+    .slider-arrows {
+        width: 55px;
+    }
+
+    .slider-arrow-left {
+        width: 20px;
+    }
+
+    .slider-arrow-right {
+        width: 20px;
+    }
+
+    .section-title-dark{
+        font-size: 28px;
+        line-height: 40px;
+    }
+
+    #bigPlayButton img {
+        height: 50px;
+        width: 50px;
+    }
+
+    .progressMobile {
+        height: 4px;
+    }
+
+    .progressMobile::-webkit-slider-thumb {
+        width: 10px;
+        height: 10px;
+    }
+
+    .playPause {
+        margin-left: 20px;
+    }
+
+    .fullWindow {
+        margin-right: 20px;
+    }
+
+    .playPause {
+        height: 18px;
+        width: 14px;
+    }
+
+    .volume {
+        height: 14px;
+        width: 18px;
+    }
+
+    .fullWindow {
+        height: 18px;
+        width: 18px;
+    }
+
+    .progressVolume {
+        height: 4px;
+    }
+
+    .progressVolume::-webkit-slider-thumb{
+        height: 10px;
+        width: 10px;
+    }
+
+    .slick-slider-players {
+        margin: 40px 0;
+    }
+
+    .slick-slide {
+        height: 101px;
+        width: 180px;
+    }
+
+    .video-slider-pagination {
+        margin-bottom: 0;
+    }
+
+    .section-title-container {
+        padding-bottom: 40px;
+    }
+
+    .picture-container{
+        height: 630px;
+    }
+
+    .picture-inner-container img{
+        width: 178px;
+    }
+
+    .tickets-form-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tickets-form-container img {
+        height: 160px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .tickets-form {
+        width: 175px;
+        padding-top: 40px;
+        padding-left: 0;
+        margin-right: 0;
+    }
+
+    .tickets-options{
+        padding-bottom: 0;
+    }
+
+    .ticket-title{
+        margin: 0 auto;
+        padding-bottom: 20px;
+        font-size: 16px;
+    }
+
+    .amount-item-title{
+        margin-bottom: 15px;
+        font-size: 16px;
+    }
+
+    .ticket-form-amount-item{
+        margin-bottom: 20px;
+    }
+
+    .total-amount {
+        margin-top: 20px;
+        justify-content: center;
+    }
+
+    .ticket-amount-title{
+        font-size: 16px;
+    }
+
+    .tickets-Button{
+        margin-top: 40px;
+    }
+
+    .contacts-address-title {
+        font-size: 16px;
+        margin-bottom: 40px;
+    }
+
+    .contacts-address-subtitle{
+        font-size: 16px;
+    }
+
+    .footer-left-side{
+        flex-direction: column;
+    }
+
+    .footer-logo {
+        height: 20px;
+        width: 131px;
+        margin-right: 0;
+    }
+
+    .footer-image-logo{
+        height: 16px;
+        width: 29px;
+    }
+
+    .footer-nav {
+        margin-top: 40px;
+    }
+
+    .footer-ul {
+        justify-content: space-between;
+        gap: 30px 0;
+    }
+
+    .footer-li {
+        width: 39%;
+        font-size: 16px;
+    }
+
+    .footer-li.mob{
+        width: 22%;
+    }
+
+    .footer-nav {
+        height: auto;
+        width: 100%;
+    }
+
+    .footer-left-side {
+        margin-bottom: 40px;
+    }
+
+    .footer-right-side {
+        justify-content: center;
+        margin-right: 0;
+    }
+
+    .footer-follow-us {
+        height: 48px;
+        width: 260px;
+    }
+
+    .footer-main-item{
+        font-size: 16px;
+    }
+
+    .footer-main-item.rolling{
+        display: none;
+    }
+
+    .footer-container-second {
+        padding-bottom: 40px;
+    }
 
 }
 
