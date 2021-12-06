@@ -938,6 +938,7 @@ a{
 
 .explore-container{
     display: flex;
+    align-items: center;
     gap: 0 60px;
     padding-top: 75px;
     padding-bottom: 75px;
@@ -948,10 +949,11 @@ a{
 }
 
 .explore-picture{
-    height: 700px;
-    width: 720px;
+    height: 100%;
+    width: 50%;
     right: 0;
     bottom: 0;
+    object-fit: cover;
 }
 
 .explore-subtitle{
@@ -1172,18 +1174,18 @@ a{
     overflow: hidden;
 }
 .picture-inner-container{
-    height: 3000px;
+    height: 2500px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     flex-direction: column;
-    column-gap: 36px;
+    column-gap: 3.5%;
     row-gap: 24px;
     overflow: hidden;
 }
 
 .picture-inner-container img{
-    width: 456px;
+    width: 31%;
 }
 
 .galery-box-shadow{
@@ -2045,8 +2047,8 @@ select{
 }
 
 .contacts-map img{
-    height: 620px;
-    width: 960px;
+    height: 100%;
+    width: 100%;
 }
 
 /*.....SECTION-CONTACTS-END.....*/
@@ -2059,13 +2061,15 @@ select{
 }
 
 .footer-container{
-    height: 140px;
+    height: auto;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
 .footer-left-side{
     display: flex;
+    gap: 40px 0;
 }
 
 .footer-logo{
@@ -2126,6 +2130,7 @@ select{
 }
 
 .footer-follow-us{
+    padding-top: 40px;
     height: 48px;
     width: 340px;
 }
@@ -2237,6 +2242,7 @@ select{
     font-size: 22px;
     line-height: 22px;
     letter-spacing: 2px;
+    text-align: center;
 }
 
 /*.....SECTION-FOOTER-END.....*/
@@ -2521,12 +2527,17 @@ select{
         padding-top: 60px;
     }
 
+    .picture-container {
+        height: 1260px;
+    }
+
     .picture-inner-container{
-        height: 2000px;
+        height: 1300px;
     }
 
     .picture-inner-container img{
-        width: 304px;
+        column-gap: 5%;
+        width: 30%;
     }
 
     .tickets-form-container img{
@@ -2579,11 +2590,6 @@ select{
 
     .contacts-title{
         margin-bottom: 83px;
-    }
-
-    .contacts-map img{
-        height: 454px;
-        width: 694px;
     }
 
     .contacts-address-title {
@@ -2841,15 +2847,17 @@ select{
     }
 
     .picture-container {
-        height: 1760px;
+        height: 1020px;
     }
 
     .picture-inner-container{
+        height: 1760px;
         column-gap: 24px;
     }
     
     .picture-inner-container img{
-        width: 352px;
+        width: 48%;
+        column-gap: 4%;
     }
 
     .section-title-container {
@@ -2943,12 +2951,8 @@ select{
     }
 
     .footer-left-side {
+        flex-wrap: wrap;
         margin-bottom: 42px;
-    }
-
-    .footer-right-side {
-        justify-content: flex-end;
-        margin-right: 90px;
     }
 
     .footer-line {
@@ -3152,8 +3156,8 @@ select{
         height: 630px;
     }
 
-    .picture-inner-container img{
-        width: 178px;
+    .picture-inner-container{
+        height: 960px;
     }
 
     .tickets-form-container{
