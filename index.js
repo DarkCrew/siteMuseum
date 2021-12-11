@@ -112,12 +112,14 @@ const welcomeMenuIcon = document.querySelector('.menu-icon');
 const welcomeMenuItems = document.querySelectorAll('.welcome-pop-up-li');
 const welcomeBlock = document.querySelector('.welcome-block');
 const welcomePopUp = document.querySelector('.welcome-pop-up');
+const welcomeSlider = document.querySelector('.welcome-slider');
 
 const changeStateWelcomeMenu = () => {
   stateWelcomeBtn.classList.toggle('active');
   welcomeMenuIcon.classList.toggle('active');
   welcomeBlock.classList.toggle('hide');
   welcomePopUp.classList.toggle('active');
+  welcomeSlider.classList.toggle('disable');
 }
 
 btnWelcomeMenu.addEventListener('click', () => {

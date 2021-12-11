@@ -628,10 +628,10 @@ a{
 }
 
 .welcome-pop-up.active{
-    display: flex;
+    display: none;
 }
 
-.welcome-pop-up-photo{
+.welcome-pop-up-container{
     width: 90.38%;
     display: flex;
     flex-direction: column;
@@ -1504,7 +1504,7 @@ input[type="number"]:focus {
 .form-input-container{
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    row-gap: 20px;
     width: 100%;
     font-family: "Roboto-Regular";
     font-size: 18px;
@@ -2130,7 +2130,7 @@ select{
 }
 
 .footer-follow-us{
-    padding-top: 40px;
+    padding-bottom: 35px;
     height: 48px;
     width: 340px;
 }
@@ -2701,6 +2701,10 @@ select{
         line-height: 60px;
     }
 
+    .welcome-pop-up.active{
+        display: flex;
+    }
+
     .welcome-block-subtitle {
         font-size: 20px;
     }
@@ -2717,6 +2721,10 @@ select{
     .welcome-slider {
         height: 75%;
         width: 100%;
+    }
+
+    .welcome-slider.disable{
+        display: none;
     }
 
     .welcome-slider-container{
@@ -2969,7 +2977,7 @@ select{
     .popUp {
         top: 0;        
         height: 1479px;
-        width: 590px;
+        width: 76%;
         box-sizing: border-box;
     }
 
@@ -2982,13 +2990,13 @@ select{
     }
 
     .popUp-subcontainer-left {
-        margin-top: 80px;
-        margin-bottom: 51px;
         height: 100%;
-        width: 530px;
+        width: 89%;
+        margin-bottom: 50px;
     }
 
     .form-title-container {
+        margin-top: 80px;
         margin-bottom: 40px;
     }
 
@@ -3010,13 +3018,79 @@ select{
     }
 
     .popUp-subcontainer-right {
+        width: 89%;
         margin-bottom: 40px;
         box-sizing: border-box;
+    }
+
+    .popUp-right-shell{
+        width: 100%;
+        margin: 25px 15px;
+    }
+
+    .form-card-container{
+        height: 39%;
+    }
+
+    .form-card-front{
+        height: 88%;
+        width: 76%;
+    }
+
+    .form-card-info-container{
+        width: 100%;
+        margin: 0 20px;
+    }
+
+    .form-card-front-input{
+        width: 74%;
+    }
+
+    .form-card-back{
+        height: 88%;
+        width: 76%;
+        flex-direction: column;
+    }
+
+    .form-card-back-black-line {
+        height: 21%;
+        top: 0;
+        margin-top: 25px;
+    }
+
+    .form-card-info-container.card-back {
+        bottom: 0;
+        height: 68%;
+        margin: 0;
+    }
+
+    .form-card-back-rightside{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 22%;
+        margin-right: 20px;
+        justify-content: center;
+    }
+
+    .form-card-back-cvc{
+        margin: 0;
+        margin-bottom: 5px;
+        font-size: 13px;
+    }
+
+    .form-cardnumber-back-input{
+        height: 25%;
+    }
+
+    .form-card-back-cvc-discription{
+        font-size: 9px;
     }
 
     .welcome-pop-up-menu{
         height: 333px;
     }
+
 }
 
 @media (max-width:420px){
@@ -3045,12 +3119,74 @@ select{
         line-height: 40px;
     }
 
+    .welcome{
+        width: 100%;
+    }
+
+    .container.welcome-container{
+        margin: 0 55px;
+    }
+
     .welcome-block-subtitle {
         font-size: 16px;
     }
 
     .welcome-slider {
         width: 100%;
+    }
+
+    .welcome-pop-up-container{
+        width: 100%;
+    }
+
+    .welcome-pop-up-photo{
+        display: inline;
+        height: 95px;
+        width: 100%;
+    }
+    
+    .welcome-pop-up-photo-1row{
+        display: inline-block;
+        height: 100%;
+        width: 30%;
+        margin-right: 2%;
+    }
+
+    .welcome-pop-up-photo-1row img{
+        object-fit: cover;
+        height: 100%;
+        margin-bottom: 0;
+    }
+
+    .welcome-pop-up-photo-2row{
+        display: inline-block;
+        height: 100%;
+        width: 66%;
+    }
+
+    .welcome-pop-up-photo-2row img{
+        float: left;
+        height: 100%;
+        width: 48%;
+        object-fit: cover;
+        margin-right: 4%;
+    }
+
+    .welcome-pop-up-photo-2row img:last-child{
+        margin-right: 0;
+    }
+
+    .welcome-pop-up-ul{
+        margin-left: 0;
+    }
+
+    .welcome-pop-up-line{
+        margin-top: 20px;
+        margin-bottom: 0;
+    }
+
+    .footer-follow-us {
+        padding: 24px 0;
     }
 
     .slider-container{
@@ -3283,6 +3419,114 @@ select{
         padding-bottom: 40px;
     }
 
+    .popUp{
+        height: auto;
+        width: 100%;
+    }
+
+    .popUp-subcontainer-left{
+        width: 85%;
+    }
+
+    .popUp-subcontainer-right{
+        width: 85%;
+    }
+
+    .form-title{
+        font-size: 32px;
+    }
+
+    .form-divider{
+        height: 2px;
+    }
+
+    .form{
+        width: 100%;
+    }
+    
+    .form-entry-ticket{
+        height: auto;
+        width: 100%;
+        margin: 10px 15px 15px 15px;
+    }
+
+    .form-entry-amount-title{
+        font-size: 18px;
+    }
+
+    .popUp-right-shell{
+        height: auto;
+        width: 100%;
+        margin: 25px 15px;
+    }
+
+    .form-overview-photo{
+        height: 96px;
+        width: 120px;
+    }
+
+    .form-card-container{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        position: static;
+    }
+
+    .form-card-front{
+        position: static;
+        width: 100%;
+        margin-bottom: 25px;
+    }
+
+    .form-card-info-container{
+        width: 100%;
+        margin: 0 20px;
+    }
+
+    .form-card-front-input{
+        width: 74%;
+    }
+
+    .form-card-back{
+        position: static;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .form-card-back-black-line {
+        height: 21%;
+        position: static;
+        top: 0;
+        margin-top: 25px;
+    }
+
+    .form-card-info-container.card-back {
+        height: 68%;
+        margin: 0;
+    }
+
+    .form-card-back-rightside{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 22%;
+        margin-right: 20px;
+        justify-content: center;
+    }
+
+    .form-card-back-cvc{
+        margin: 0;
+        margin-bottom: 5px;
+        font-size: 13px;
+    }
+
+    .form-cardnumber-back-input{
+        height: 25%;
+    }
+
+    .form-card-back-cvc-discription{
+        font-size: 9px;
+    }
 }
 
 
