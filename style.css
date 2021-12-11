@@ -1419,7 +1419,7 @@ input[type="number"]:focus {
     display: flex;
     position: absolute;
     height: 845px;
-    width: 1440px;
+    width: 100%;
     background-color: #FFFFFF;
 }
 
@@ -1504,6 +1504,7 @@ input[type="number"]:focus {
 .form-input-container{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     row-gap: 20px;
     width: 100%;
     font-family: "Roboto-Regular";
@@ -1859,8 +1860,9 @@ select{
 }
 
 .form-card-info-container{
-    height: 181px;
     width: 320px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .form-card-front-first{
@@ -2622,7 +2624,59 @@ select{
 
     .popUp {
         height: 768px;
-        width: 1030px;
+        width: 100%;
+    }
+
+    .popUp-container{
+        width: 94%;
+    }
+
+    .popUp-subcontainer-left{
+        width: 41%;
+    }
+
+    .popUp-subcontainer-right{
+        width: 54%;
+    }
+
+    .popUp-right-shell{
+        width: 94%;
+    }
+
+    .form-input-container{
+        justify-content: space-between;
+    }
+
+    .form{
+        width: 47.5%;
+    }
+
+    .form-title{
+        font-size: 36px;
+    }
+
+    .form-entry-ticket{
+        width: 92.5%;
+    }
+
+    .form-amount {
+        width: 100%;
+    }
+
+    .form-amount-item{
+        width: 28%;
+    }
+
+    .form-card-front{
+        width: 72%;
+    }
+
+    .form-card-back{
+        width: 72%;
+    }
+
+    .form-card-info-container{
+        width: 88%;
     }
 
     .welcome-pop-up-nav{
@@ -2677,7 +2731,7 @@ select{
     .header {
         height: 110px;
     }
-
+    
     .welcome {
         height: auto;
     }
@@ -3028,6 +3082,10 @@ select{
         margin: 25px 15px;
     }
 
+    .form-overiview-image-definition{
+        font-size: 15px;
+    }
+
     .form-card-container{
         height: 39%;
     }
@@ -3037,11 +3095,6 @@ select{
         width: 76%;
     }
 
-    .form-card-info-container{
-        width: 100%;
-        margin: 0 20px;
-    }
-
     .form-card-front-input{
         width: 74%;
     }
@@ -3049,7 +3102,6 @@ select{
     .form-card-back{
         height: 88%;
         width: 76%;
-        flex-direction: column;
     }
 
     .form-card-back-black-line {
@@ -3059,17 +3111,17 @@ select{
     }
 
     .form-card-info-container.card-back {
-        bottom: 0;
+        position: absolute;
         height: 68%;
         margin: 0;
+        bottom: 0;
     }
 
     .form-card-back-rightside{
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 22%;
-        margin-right: 20px;
+        width: 26%;
         justify-content: center;
     }
 
@@ -3085,6 +3137,10 @@ select{
 
     .form-card-back-cvc-discription{
         font-size: 9px;
+    }
+
+    .form-front-card-title{
+        font-size: 10px;
     }
 
     .welcome-pop-up-menu{
@@ -3479,8 +3535,7 @@ select{
     }
 
     .form-card-info-container{
-        width: 100%;
-        margin: 0 20px;
+        width: 88%;
     }
 
     .form-card-front-input{
@@ -3494,15 +3549,15 @@ select{
     }
 
     .form-card-back-black-line {
-        height: 21%;
+        height: 45px;
         position: static;
         top: 0;
         margin-top: 25px;
     }
 
     .form-card-info-container.card-back {
-        height: 68%;
-        margin: 0;
+        margin: 15px 0;
+        position: static;
     }
 
     .form-card-back-rightside{
@@ -3510,7 +3565,6 @@ select{
         flex-direction: column;
         align-items: center;
         width: 22%;
-        margin-right: 20px;
         justify-content: center;
     }
 
